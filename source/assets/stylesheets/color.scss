@@ -1,0 +1,37 @@
+
+/* site body */
+body {
+  background-color: #f4eee8;
+  color: #2f1b07;
+}
+
+/* purple header */
+header {
+  background: #ECDBC9;
+  border-color: #685678;
+}
+
+/* nav background on mobile */
+nav {
+  background: #2f1b07;
+}
+
+/* logo text */
+h1, h2 {
+  color: #2f1b07;
+}
+
+/* links */
+a {
+  color: #42374b;
+}
+
+/* nav link */
+nav a, nav a:visited {
+  color: #2f1b07;
+}
+
+/* selected nav link */
+nav a.selected, nav a:hover {
+  color: #2f1b07;
+}
