@@ -8,12 +8,32 @@
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "The Middleman" %></title>
-
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag  "application" %>
   </head>
 
   <body class="<%= page_classes %>">
+    <header>
+      <a href="/" id="logo">
+        <h1> Ambiances Bois | Menuiserie </h1>    
+        <h3> SARL Cholvy & Lambert </h3>
+      </a>
+      <nav>
+        <ul>
+          <li><%= nav_link('Accueil', '/') %></li>
+          <li><%= nav_link('Cuisines', '/cuisines') %></li>
+          <li><%= nav_link('Contact', '/contact') %></li>
+        </ul>
+      </nav>
+    </header>
+
     <%= yield %>
+
+    <footer>
+        <a href="https://twitter.com/mariongiraudtse"><img src="img/twitter-wrap.png" alt="Twitter logo"></a>
+        <a href="https://www.facebook.com/marion.giraud.96"><img src="img/facebook-wrap.png" alt="Facebook logo"></a>
+        <p>&copy; 2015 Ambiances Bois</p>
+      </footer>
   </body>
 </html>

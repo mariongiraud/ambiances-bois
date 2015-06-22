@@ -32,7 +32,7 @@ helpers do
     else
       current_url = current_page.url
     end
-    options[:class] << " active" if page_url == current_url
+    options[:class] << " selected" if page_url == current_url
     link_to(link_text, page_url, options)
   end
 end
