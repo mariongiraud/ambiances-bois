@@ -14,15 +14,23 @@
   <section>
     <h3>Galerie d'images </h3>
     <ul id="imageGallery">
-      <li><%= image_tag 'ecorce.jpg', alt: 'ecorce'%></li>
-      <li><%= image_tag 'ecorce.jpg', alt: 'ecorce'%></li>
-      <li><%= image_tag 'ecorce.jpg', alt: 'ecorce'%></li>
-      <li><%= image_tag 'ecorce.jpg', alt: 'ecorce'%></li>
-      <li><%= image_tag 'ecorce.jpg', alt: 'ecorce'%></li>
-      <li><%= image_tag 'ecorce.jpg', alt: 'ecorce'%></li>
-      <li><%= image_tag 'ecorce.jpg', alt: 'ecorce'%></li> 
-      <li><%= image_tag 'ecorce.jpg', alt: 'ecorce'%></li>
-      <li><%= image_tag 'ecorce.jpg', alt: 'ecorce'%></li>
+      <li><%= image_tag 'ecorce.jpg', alt: 'ecorce 0', 'data-index' => 0 %></li>
+      <li><%= image_tag 'ecorce.jpg', alt: 'ecorce 1', 'data-index' => 1  %></li>
+      <li><%= image_tag 'ecorce.jpg', alt: 'ecorce 2', 'data-index' => 2  %></li>
+      <li><%= image_tag 'ecorce.jpg', alt: 'ecorce 3', 'data-index' => 3  %></li>
+      <li><%= image_tag 'ecorce.jpg', alt: 'ecorce 4', 'data-index' => 4  %></li>
+      <li><%= image_tag 'ecorce.jpg', alt: 'ecorce 5', 'data-index' => 5  %></li>
+      <li><%= image_tag 'ecorce.jpg', alt: 'ecorce 6', 'data-index' => 6  %></li> 
+      <li><%= image_tag 'ecorce.jpg', alt: 'ecorce 7', 'data-index' => 7  %></li>
+      <li><%= image_tag 'ecorce.jpg', alt: 'ecorce 8', 'data-index' => 8  %></li>
     </ul>   
   </section>
+</div>
+
+<div id="overlay">
+  <h3></h3>
+  <div class="image-container"></div>
+  <button class="previous">Précedent</button>
+  <button class="close">Fermer</button>
+  <button class="next">Suivant</button>
 </div>

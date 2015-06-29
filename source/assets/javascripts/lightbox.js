@@ -1,43 +1,46 @@
 $(function() {
-  // Problem : user when clicking on image goes to a dead end
-  // Solution : Create an overlay with the large image - Lightbox
+  var $overlay = $("#overlay");
+  var $images = $("#imageGallery img");
+  var galerieLength = $images.length - 1;
+  var $image_container = $overlay.find('.image-container');
+  var $overlay_title = $overlay.find('h3');
 
-  var $overlay = $('<div id="overlay"></div>');
-  var $image = $("<img>");
-  var $caption = $("<p></p>");
+  var setOvervaleyTitleAndImage = function($image) {
+    var title = $image.attr('alt');
+    $image_container.html($image);
+    $overlay_title.text(title);
+  }
 
-    //2.1 An image to overlay
-  $overlay.append($image);
+  $images.click(function(event) {
+    var $image = $(this).clone();
+    setOvervaleyTitleAndImage($image);
 
-    // 2.2 A caption
-  $overlay.append($caption);
-
-  //2. Add overlay
-  $("body").append($overlay);  
-
-
-  // 1. Capture the click event on a link to an image
-  $("#imageGallery img").click(function(event){
-
-    event.preventDefault();
-    // console.log(this);
-    var imageLocation = $(this).attr("src");
-    //1.2 Update the overlay with the image linked in the link
-    $image.attr("src", imageLocation);
-    
-    //1.1 Show the overlay.
     $overlay.show();
-    
-    //1.3 Get child's alt attribute and set caption 
-    var captionText = $(this).children("img").attr("alt");
-    $caption.text(captionText);
-   });
+  });
 
+  $("#overlay button.next").click(function() {
+    var index = $(this).parent().find('img').attr('data-index');
+    if (index < galerieLength) {
+      var next_index = parseInt(index) + 1;
+    } else {
+      var next_index = 0;
+    }
+    var $next_image = $('img[data-index='+ next_index +']').clone();
+    setOvervaleyTitleAndImage($next_image);
+  });
 
+  $("#overlay button.previous").click(function() {
+    var index = $(this).parent().find('img').attr('data-index');
+    if (index > 0) {
+      var prev_index = parseInt(index) - 1;
+    } else {
+      var prev_index = galerieLength;
+    }
+    var $prev_image = $('img[data-index='+ prev_index +']').clone();
+    setOvervaleyTitleAndImage($prev_image);
+  });
 
-  //3. When overlay is clicked
-  $overlay.click(function(){
-    //3.1 Hide the overlay 
+  $("#overlay button.close").click(function() {
     $overlay.hide();
   });
 });
