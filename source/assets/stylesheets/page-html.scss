@@ -1,5 +1,5 @@
 /**********************************
-PAGE: INDEX - Nos realisations
+PAGE: INDEX - Vignettes
 ***********************************/
 
 #gallery {
@@ -23,6 +23,10 @@ PAGE: INDEX - Nos realisations
 
 }
 
+#gallery a {
+  color: $base-a-color;
+
+}
 #gallery li a p {
   color: #685678;
   font-size: $base-font-size;    
@@ -40,6 +44,7 @@ PAGE: INDEX - Nos realisations
 
 h2 {
   border-bottom: $base-border;
+  border-bottom-color: #685678;
   box-sizing: border-box;
   font-family: 'Lora', serif;
   padding-bottom: $small-spacing;

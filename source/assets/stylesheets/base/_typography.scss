@@ -16,11 +16,12 @@ h6 {
   font-family: $heading-font-family;
   font-size: $base-font-size;
   line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
+  margin: 0 $small-spacing $small-spacing;
 }
 
 h1 {
   font-size: $h1-font-size;
+  padding-left: $small-spacing / 2;
 }
 
 h2 {
@@ -72,4 +73,8 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+footer {
+  font-size: $footer-font-size;
 }

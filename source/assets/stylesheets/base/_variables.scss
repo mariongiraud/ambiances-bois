@@ -9,6 +9,7 @@ $h2-font-size: $base-font-size * 2;
 $h3-font-size: $base-font-size * 1.75;
 $h4-font-size: $base-font-size * 1.5;
 $h5-font-size: $base-font-size * 1.25;
+$footer-font-size: $base-font-size / 1.25;
 
 // Line height
 $base-line-height: 1.5;
@@ -28,8 +29,9 @@ $light-gray: #ddd;
 $white: #fff;
 
 // Font Colors
-$base-background-color: #fff;
-$base-font-color: $dark-gray;
+$base-background-color: #fffBF7;
+$base-font-color: #402102;
+$base-a-color: lighten($base-font-color, 10%);
 $action-color: $medium-gray;
 
 // Border
