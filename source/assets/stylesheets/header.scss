@@ -5,21 +5,42 @@ HEADER
 header {
   background: #eecfaf; //  marron moyen #ECDBC9 #d2b48c #cb9259
   border-color: #685678; // violet du h5
-  margin: 0 0 $base-spacing 0;
+  //margin: 0 0 $base-spacing 0;
   padding: 5px 0 0 0;
   width: 100%;
+  @media screen and (min-width: 1220px) {
+    float:left;
+    border-bottom: 5px solid #42374b;
+    margin-bottom:60px;
+    //margin-left: 5%;
+    text-align: left;
+    }
+  }   
 
-  #logo {
-    margin: 0;
+  //#logo {
+    //margin: 0;
+  //}
+
+.title {
+  @media screen and (min-width: 1220px) {
+    float:left;
+    width: 60%;
   }
-
-  h1 {
-    font-family: 'Lobster', cursive;
-    font-weight: normal;
-    margin: $small-spacing/2 0;
-  }
-
 }
+
+h1 {
+  @extend .title;
+  color: $base-font-color;
+  font-family: 'Lobster', cursive;
+  font-weight: normal;
+  margin: $small-spacing/2 0;
+  }
+
+h4 {
+    @extend .title;
+    //font-size: 0.825;
+    margin-bottom: 20px;
+  }
 
 /**********************************
 NAVIGATION
@@ -27,6 +48,7 @@ NAVIGATION
 
 @mixin nav {
   a {
+    color: $base-font-color;
     &:hover, &.selected {
       color: $base-a-color;
     }
@@ -38,7 +60,14 @@ nav {
   text-align: center;
   padding: 10px 0;
   margin: 20px 0 0;
-
+  @media screen and (min-width: 1220px) {
+    background:none;
+    float:right;
+    font-size: 1.25em;
+    margin-right: 3%;
+    text-align: right;
+    width: 30%;
+  }
   ul {
     list-style: none;
     margin: 0 10px;
@@ -54,14 +83,6 @@ nav {
     padding: 15px 10px;
   }
 }
-
-//nav a.selected, nav a:hover {
-//  color: red;
-//}
-
-//nav a, nav a:visited {
- // color: #402102;
-//}
 
 /**********************************
 FOOTER

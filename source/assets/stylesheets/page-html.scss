@@ -2,95 +2,123 @@
 PAGE: INDEX - Vignettes
 ***********************************/
 
+.contentSection {
+  padding-top : $base-spacing * 2;
+
+  h2 {
+    border-bottom: $base-border;
+    border-bottom-color: #685678;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+    padding-bottom: $small-spacing;
+    text-align: center;
+  }
+}
+
 #gallery {
   list-style: none;
   margin: 0;
   padding: 0; 
-}
 
-#gallery li {
-  
-  background-color: #f5f5f5;
-  border-radius: $base-border-radius;
-  height : 285px;
-  margin: 2.5%;
-  text-align: center;
-  weight : 400px;
-}
+  li { 
+    background-color: #f5f5f5;
+    border-radius: $base-border-radius;
+    float: left;
+    height : 285px;
+    margin: $small-spacing;
+    text-align: center;
+    width: 400px; 
+    
+    img {
+      max-width: 90%;
+    }
 
-#gallery img {
-  max-width: 90%;
-
-}
-
-#gallery a {
-  color: $base-a-color;
-
-}
-#gallery li a p {
-  color: #685678;
-  font-size: $base-font-size;    
-  margin: 0;
-  padding: 5%;
-}
-
-#gallery p {
-  border-top : $base-border;
+    p {
+      border-top : $base-border;
+      color: #685678;
+      font-size: $base-font-size;    
+      margin: 0;
+      padding: 5%;
+    }
   }
+  
+  @media screen and (min-width: 580px) {}
 
-.contentSection {
-  padding-top : $base-spacing * 2;
-}
+  @media screen and (min-width: 880px) {
+    li:nth-child(3n) {
+        float: left;
+        //height: 30%;
+        //margin: 1%;
+        //width: 30%;
+        
+      }
+    }
 
-h2 {
-  border-bottom: $base-border;
-  border-bottom-color: #685678;
-  box-sizing: border-box;
-  font-family: 'Lora', serif;
-  padding-bottom: $small-spacing;
-  text-align: center;
+  @media screen and (min-width: 1220px) {
+    li:nth-child(3n) {
+        clear:none;
+      }
+    li:nth-child(4n) {
+       float: left;
+       //width: 28.3333%;
+      }   
+  }
+  
 }
 
 /**********************************
-PAGE: ABOUT - Notre entreprise
+PAGE: Contact
 ***********************************/
 
-h5 {
-  margin-bottom: $base-spacing;
-}
+#wrapper {
 
-p {
-  font-size: $h5-font-size;
-  margin-bottom: $base-spacing;
-}
+  h5 {
+    margin-left: 0;
+  }
 
-textarea{
-  margin-bottom: $base-spacing * 2;
-}
+  p {
+    margin-bottom: $base-spacing;
+  }
 
-.contact-info {
-  font-size: $base-font-size;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+  textarea{
+    margin-bottom: $base-spacing * 2;
+  }
 
-.contact-info a {
-  align-items: center; 
-  background-repeat: no-repeat;
-  background-size: 60px 60px;
-  display: flex;  
-  justify-content: left;
-  margin: 0 0 10px;
-  min-height: 60px;
-  padding: 0 0 0 60px; 
-}
 
-.contact-info li.phone a {
-  background-image: url('../images/phone.png');
-}
+  .contact-info {
+    list-style: none;
+    padding: 0;
 
-.contact-info li.mail a {
-  background-image: url('../images/mail.png');
-}
+    a {
+      align-items: center; 
+      background-repeat: no-repeat;
+      background-size: 60px 60px;
+      display: flex;  
+      justify-content: left;
+      margin: 0 0 10px;
+      min-height: 60px;
+      padding: 0 0 0 60px; 
+    }
 
+    li.phone a {
+      background-image: url('../images/phone.png');
+    }
+
+    li.mail a {
+      background-image: url('../images/mail.png');
+    }
+
+  }
+  
+  @media screen and (min-width: 580px) { 
+    #primary {
+      width: 50%;
+      float: left;
+    }
+   #secondary {
+      width: 40%;
+      float: right;
+    }
+
+  }
+}

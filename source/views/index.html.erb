@@ -15,35 +15,34 @@
     <h2 class="contentSection">Nos réalisations</h2>
     <ul id="gallery">
       <li>
-        <%link_to 'cuisines' do %>
+        <% link_to 'cuisines', class: 'indexGallery' do %>
           <%= image_tag 'poolhouse.jpg', alt: 'poolhouse'%>
           <p>Création de cuisine</p>
         <% end %>
-        </a>
       </li>
       <li>
-        <%= link_to 'Restauration de meubles', 'restauration' %>
+        <% link_to 'Restauration de meubles', class: 'indexGallery' do %>
           <%= image_tag 'poolhouse.jpg', alt: 'poolhouse'%>
           <p>Restauration de meubles</p>
-        </a>
+        <% end %>
       </li>
       <li>
-        <a href="img/poolhouse.jpg">
+        <% link_to 'Poolhouse', class: 'indexGallery' do %>
           <%= image_tag 'poolhouse.jpg', alt: 'poolhouse'%>
           <p>Création d'espace intérieur</p>
-        </a>
+        <% end %>
       </li>
       <li>
-        <a href="img/poolhouse.jpg">
+        <% link_to 'Poolhouse', class: 'indexGallery' do %>
           <%= image_tag 'poolhouse.jpg', alt: 'poolhouse'%>
           <p>Création d'espace extérieur</p>
-        </a>
+        <% end %>
       </li>
       <li>
-        <a href="img/poolhouse.jpg">
+       <% link_to 'Poolhouse', class: 'indexGallery' do %>
           <%= image_tag 'poolhouse.jpg', alt: 'poolhouse'%>
           <p>Travaux d'aérogommage</p>
-        </a>
+        <% end %>
       </li>
     </ul>
   </section>

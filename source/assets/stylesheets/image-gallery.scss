@@ -1,22 +1,25 @@
+
 ul#imageGallery {
   display: block;
   text-align: center;
+
+  li {
+    background: darken($base-background-color, 5%);
+    border-radius: $base-border-radius;
+    display: inline-block;
+    margin: 10px;
+    padding: 8px;
+
+    img  {
+      display: block;
+    }
+  } 
+
+  a {
+    text-decoration: none;
+  }
+
 } 
-
-ul#imageGallery li {
-  background: $white;
-  display: inline-block;
-  margin: 10px;
-  padding: 8px;
-}
-
-ul#imageGallery li img  {
-  display: block;
-}
-
-ul#imageGallery a {
-  text-decoration: none;
-}
 
 // Overlay 
 
@@ -29,21 +32,21 @@ ul#imageGallery a {
   text-align: center;
   top: 0;
   width: 100%;
+
+  img {
+    border-radius: $base-border-radius;
 }
 
-#overlay img {
-  border-radius: $base-border-radius;
-  // margin-bottom: $base-spacing;
+  h3 {
+    color: $white;
+    margin: $base-spacing 0;
+  }
+
+  p {
+    color: $white;
+  }
 }
 
-#overlay h3 {
-  color: $white;
-  margin: $base-spacing 0;
-}
-
-#overlay p {
-  color: $white;
-}
 
 // Caroussel 
 
@@ -61,7 +64,7 @@ ul#imageGallery a {
 }
 
 .image-container img {
-  border: 10px solid $white;
-  margin: 0 $base-spacing*2;
+  border: 10px solid darken($base-background-color, 5%);
+  margin: 0 $base-spacing * 2;
   margin-bottom: 0;
 }
