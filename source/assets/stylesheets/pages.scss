@@ -1,0 +1,73 @@
+/**********************************
+PAGE: INDEX - Vignettes
+***********************************/
+
+.introduction {
+  font-size: $h5-font-size;
+}
+
+.section-header {
+  margin-top: $base-spacing;
+}
+
+.work {
+  li {
+    @include span-columns(4);
+    @include omega(3n);
+
+    margin-top: $base-spacing;
+    text-align: center;
+  }
+  
+  figcaption {
+    font-size: $h5-font-size;
+  }
+}
+
+/**********************************
+PAGE: Cuisines
+***********************************/
+
+.gallery {
+  li {
+    @include span-columns(4);
+    @include omega(3n);
+    
+    background: darken($base-background-color, 5%);
+    border-radius: $base-border-radius;
+    margin-bottom: $small-spacing;
+    padding: $small-spacing;
+  }
+}
+
+/**********************************
+PAGE: Contact
+***********************************/
+
+.contact-form {
+  @include span-columns(7);
+}
+
+.contact-info {
+  @include span-columns(4);
+  @include shift(1);
+
+  .phone {
+    background-image: url('../images/phone.png');
+    background-repeat: no-repeat;
+    background-size: 1.5em;
+    background-position: 3px 4px;
+    margin-bottom: $small-spacing;
+    padding-left: 2em;
+
+  }
+
+  .mail {
+    background-image: url('../images/mail.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: top left;
+    margin-bottom: $small-spacing;
+    padding-left: 2em;
+  }
+}

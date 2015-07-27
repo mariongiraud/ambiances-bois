@@ -71,6 +71,10 @@ input[type="file"] {
   width: 100%;
 }
 
+input[type="submit"] {
+  margin-top: $base-spacing;
+}
+
 select {
   margin-bottom: $base-spacing;
   max-width: 100%;

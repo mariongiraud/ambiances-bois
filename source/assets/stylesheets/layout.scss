@@ -5,6 +5,7 @@ body {
 
 .wrapper {
   @include outer-container;
+  
   padding: 0 1em;
 }
 

@@ -1,9 +1,9 @@
 $(function() {
   var $overlay = $("#overlay");
-  var $images = $("#imageGallery img");
+  var $images = $(".js-gallery img");
   var galerieLength = $images.length - 1;
   var $image_container = $overlay.find('.image-container');
-  var $overlay_title = $overlay.find('h3');
+  var $overlay_title = $overlay.find('.js-image-title');
 
   var setOvervaleyTitleAndImage = function($image) {
     var title = $image.attr('alt');
@@ -18,7 +18,7 @@ $(function() {
     $overlay.show();
   });
 
-  $("#overlay button.next").click(function() {
+  $("#overlay .next").click(function() {
     var index = $(this).parent().find('img').attr('data-index');
     if (index < galerieLength) {
       var next_index = parseInt(index) + 1;
@@ -29,7 +29,7 @@ $(function() {
     setOvervaleyTitleAndImage($next_image);
   });
 
-  $("#overlay button.previous").click(function() {
+  $("#overlay .previous").click(function() {
     var index = $(this).parent().find('img').attr('data-index');
     if (index > 0) {
       var prev_index = parseInt(index) - 1;
@@ -40,7 +40,7 @@ $(function() {
     setOvervaleyTitleAndImage($prev_image);
   });
 
-  $("#overlay button.close").click(function() {
+  $("#overlay .close").click(function() {
     $overlay.hide();
   });
 });
