@@ -1,97 +1,57 @@
-/**********************************
-HEADER
-***********************************/
+$header-height: 5em;
+$navigation-link-font-size: $h5-font-size;
 
-header {
+.header {
   background: #eecfaf; //  marron moyen #ECDBC9 #d2b48c #cb9259
-  border-color: #685678; // violet du h5
-  //margin: 0 0 $base-spacing 0;
-  padding: 5px 0 0 0;
-  width: 100%;
-  @media screen and (min-width: 1220px) {
-    float:left;
-    border-bottom: 5px solid #42374b;
-    margin-bottom:60px;
-    //margin-left: 5%;
-    text-align: left;
-    }
-  }   
+  border-bottom: 2px solid #685678; // violet du h5
+  height: $header-height;
+  margin-bottom: $base-spacing * 3;
+}
 
-  //#logo {
-    //margin: 0;
-  //}
+.logo {
+  float: left;
 
-.title {
-  @media screen and (min-width: 1220px) {
-    float:left;
-    width: 60%;
+  h1,
+  h2 {
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-family: $base-font-family;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-align: center;
+    text-transform: uppercase;
   }
 }
 
-h1 {
-  @extend .title;
-  color: $base-font-color;
-  font-family: 'Lobster', cursive;
-  font-weight: normal;
-  margin: $small-spacing/2 0;
+.navigation {
+  padding-top: ($header-height - ($navigation-link-font-size * $base-line-height)) / 2;
+  float: right;
+
+  ul {
+    list-style: none;
+    padding: 0;
   }
 
-h4 {
-    @extend .title;
-    //font-size: 0.825;
-    margin-bottom: 20px;
+  li {
+    display: inline;
   }
 
-/**********************************
-NAVIGATION
-***********************************/
-
-@mixin nav {
   a {
     color: $base-font-color;
+    font-family: $heading-font-family;
+    font-size: $navigation-link-font-size;
+    font-weight: bold;
+    margin-left: 1.5em;
+
     &:hover, &.selected {
       color: $base-a-color;
     }
   }
 }
-
-nav {
-  @include nav;
-  text-align: center;
-  padding: 10px 0;
-  margin: 20px 0 0;
-  @media screen and (min-width: 1220px) {
-    background:none;
-    float:right;
-    font-size: 1.25em;
-    margin-right: 3%;
-    text-align: right;
-    width: 30%;
-  }
-  ul {
-    list-style: none;
-    margin: 0 10px;
-    padding: 0;
-  }
-
-  li {
-    display: inline-block;
-    font-family: 'Lora', serif;
-  }
-  a {
-    font-weight: 800;
-    padding: 15px 10px;
-  }
-}
-
-/**********************************
-FOOTER
-***********************************/
-
-footer {
-  text-align: center;
-  clear: both;
-  padding-top: 50px;
-}
-
-

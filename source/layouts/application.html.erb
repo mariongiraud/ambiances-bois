@@ -8,28 +8,35 @@
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "The Middleman" %></title>
-    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag "application" %>
+    <script src="//use.typekit.net/pjl7tox.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
     <%= javascript_include_tag  "application" %>
   </head>
 
   <body class="<%= page_classes %>">
-    <header>
-        <h1 href="/" class="title">Ambiances Bois | Menuiserie</h1>    
-        <h4>SARL Cholvy & Lambert</h4>
-      <nav>
-        <ul>
-          <li><%= nav_link('Accueil', '/') %></li>
-          <li><%= nav_link('Cuisines', '/cuisines') %></li>
-          <li><%= nav_link('Contact', '/contact') %></li>
-        </ul>
-      </nav>
+    <header class="header">
+      <div class="wrapper">
+        <div class="logo">
+          <h1>Ambiances Bois</h1>
+          <h2>Menuiserie</h2>
+        </div>
+
+        <nav class="navigation">
+          <ul>
+            <li><%= nav_link('Accueil', '/') %></li>
+            <li><%= nav_link('Cuisines', '/cuisines') %></li>
+            <li><%= nav_link('Contact', '/contact') %></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <%= yield %>
+    <div class="wrapper">
+      <%= yield %>
+    </div>
 
-    <footer>
+    <footer class="footer">
       <p>&copy; 2015 Ambiances Bois</p>
     </footer>
   </body>

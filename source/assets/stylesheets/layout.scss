@@ -1,0 +1,16 @@
+body {
+  background-color: $base-background-color;
+  color: $base-font-color;
+}
+
+.wrapper {
+  @include outer-container;
+  padding: 0 1em;
+}
+
+.footer {
+  clear: both;
+  font-size: $footer-font-size;
+  padding-top: 50px;
+  text-align: center;
+}
