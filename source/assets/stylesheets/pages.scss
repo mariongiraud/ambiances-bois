@@ -12,15 +12,88 @@ PAGE: INDEX - Vignettes
 
 .work {
   li {
-    @include span-columns(4);
-    @include omega(3n);
+    @include span-columns(6);
+    @include omega(2n);
 
     margin-top: $base-spacing;
-    text-align: center;
+    position: relative;
+    text-align: left;
+  }
+  
+  figure {
+    margin: 0;
+    position: relative;
+
+    img {
+      display: block;
+      max-width: 100%;
+      position: relative;
+    }
   }
   
   figcaption {
-    font-size: $h5-font-size;
+    background: $base-font-color;
+    font-size: $base-font-size;
+    left: 0;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+
+    h4{
+      color: $base-background-color;
+      margin: 0;
+      padding: 0;
+    }
+
+    span {
+      color:$base-background-color;
+    }
+
+    a {
+      background: #eecfaf;
+      border-radius: 2px;
+      color: $base-a-color;
+      display: inline-block;
+      padding: 5px 10px;
+      text-align: center;
+    }
+  }
+}
+
+.animated-caption {
+  
+  figure {
+    overflow: hidden;
+    
+    &:hover img {
+      transform: translateY(-50px);
+    }
+    
+    &:hover figcaption { 
+      opacity: 1;
+      transform: translateY(0px);
+      transition: transform 0.4s, opacity 0.1s;
+    }
+  }
+
+  figure img {
+    transition: transform 0.4s;
+  }
+
+  figcaption {
+    bottom: 0;
+    height: 100px;
+    opacity: 0;
+    top: auto;
+    transform: translateY(100%);
+    transition: transform 0.4s, opacity 0.1s 0.3s;
+    width: 100%;
+    
+    a {
+      bottom: 20px;
+      position: absolute;
+      right: 20px;
+    }
   }
 }
 

@@ -12,21 +12,23 @@
   <h2 class="section-header">Nos réalisations</h2>
 
   <% photos = [
-    {title: 'Cuisines', filename: 'poolhouse.jpg'},
-    {title: 'Restauration de meubles', filename: 'poolhouse.jpg'},
-    {title: 'Poolhouse', filename: 'poolhouse.jpg'},
-    {title: 'Poolhouse', filename: 'poolhouse.jpg'}
+    {title: 'Cuisines', span: 'Réalisations bois et mélaminés', filename: 'cuisine-real.jpg'},
+    {title: 'Restauration de meubles', span: 'Réalisations bois et mélaminés', filename: 'balais.jpg'},
+    {title: 'Poolhouse', span: 'Réalisations bois et mélaminés', filename: 'poolhouse.png'},
+    {title: 'Création de meubles', span: 'Réalisations bois et mélaminés', filename: 'meuble-tv.jpg'}
   ] %>
 
-  <ul class="work">
+  <ul class="work animated-caption">
     <% photos.each do |photo| %>
       <li>
-        <% link_to '/cuisines' do %>
-          <figure>
-            <%= image_tag photo[:filename] %>
-            <figcaption><%= photo[:title] %></figcaption>
-          </figure>
-        <% end %>
+        <figure>
+          <%= image_tag photo[:filename] %>
+          <figcaption>
+            <h4><%= photo[:title] %></h4>
+            <span><%= photo[:span] %></span> 
+            <%= link_to 'En savoir +', '/cuisines' %>
+          </figcaption>
+        </figure>
       </li>
     <% end %>
   </ul>
