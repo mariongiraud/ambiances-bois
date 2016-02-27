@@ -1,27 +1,25 @@
-require "extensions/views"
-
-activate :views
 activate :directory_indexes
+activate :autoprefixer
 
 set :relative_links, true
-set :css_dir, 'assets/stylesheets'
-set :js_dir, 'assets/javascripts'
-set :images_dir, 'assets/images'
-set :fonts_dir, 'assets/fonts'
-set :layout, 'layouts/application'
+set :css_dir, "assets/stylesheets"
+set :js_dir, "assets/javascripts"
+set :images_dir, "assets/images"
+set :fonts_dir, "assets/fonts"
+set :layout, "layouts/application"
 
 configure :development do
- activate :livereload
+  activate :livereload
 end
 
 configure :build do
-  # Relative assets needed to deploy to Github Pages
+  # Relative assets needed to deploy to GitHub Pages
   activate :relative_assets
 end
 
 activate :deploy do |deploy|
   deploy.build_before = true
-  deploy.method = :git
+  deploy.deploy_method = :git
 end
 
 helpers do
